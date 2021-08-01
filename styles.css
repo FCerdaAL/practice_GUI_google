@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+body{
+    overflow: hidden;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+li{
+    float: left;
+}
+
+a{
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.mcdonald, .click_tercero img{
+
+
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+
+.text_list{
+
+    color: #595447;
+}
+
+
+
+.search{
+    position: absolute;
+    top:15%;
+    left: 0;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+input{
+    border-radius: 10px;
+    height: 45px;
+    border: solid thin rgb(223, 225, 229);
+    background: url(internet.png) no-repeat 2% center, url(internet.png) no-repeat 98% center;
+    background-size: 25px,25px;
+    z-index: 15;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 600px;
+    
+
+}
+
+.buttons a{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: rgb(248, 249, 250);
+    color: rgb(60, 64, 67);
+    margin: 15px;
+    border-radius: 8px;
+    z-index: 15;
+
+}
+
+
+button,input{
+    margin: 15px;
+}
+
+
+
+.home-content{
+    position: absolute;
+    top:460px;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    
+ 
+}
+
+.first-line{
+
+    color:#F70422;
+}
+
+.first-line a{
+    display: inline-block;
+    z-index: 15;
+}
+
+
+.container{
+    display: flex;
+    
+    height: 100vh;
+    width:100vw;
+    /* La declaracion del tamaño del div provocará que quede por encima
+    de todos los elementos anteriores. Considerar z-index para los elementos
+    supriores de la pagina. Se arregló considerando z-index de 15 para todo */
+  
+    flex-direction: column;
+    
+    
+    justify-content: flex-end;
+
+    bottom: 90px;
+
+    z-index: 1;
+  
+}
+
+footer,.footer-chile{
+    display: flex;
+    width:100vw;
+    justify-content: space-between;
+    
+
+}
+
+.footer-chile p{
+    margin-left: 15px;
+}
+
+ul:first-of-type{ /*La primera lista de arriba hacia abajo*/
+    z-index: 15;
+}
+
+.footer-background{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(242,242,242);
+}
+/* ***********************/
+/**** nav text hover ****/
+/* **********************/
+
+.tercero, .cuarto{
+    position: fixed;
+    font-size: 12px;
+    color: #fff;
+    top: 10%;
+    left: 100%;
+    background-color: rgb(79, 83, 85);
+    padding: 3px 7px;
+    border-radius: 5px;
+    z-index: 15;
+}
+
+/* **********************************************/
+/**** Las siguientes clases se añaden con JS ****/
+/* **********************************************/
+
+.active{ 
+    left: 89%; /*esta tambien es clase de .tercero, que se agrega con JS
+    Al hacer hover a mcdonalds, se añade esta clase*/
+}
+
+.active2{ 
+    left: 90%; /*esta tambien es clase de .tercero, que se agrega con JS
+    Al hacer hover a mcdonalds, se añade esta clase*/
+}
+
+.show_click{
+
+    left: 80%;
+
+}
+
+
+
+/* ******************************************************/
+/**** Ventana desplegada al hacer click en mcdonalds ****/
+/* ******************************************************/
+
+.click_tercero{
+    position: fixed;
+    top:10%;
+    left: 100%;
+    height: 130px;
+    width:180px;
+
+    box-shadow: 0px 0px 5px 1px #111;
+    border: solid thin rgb(223, 225, 229);
+
+    display: grid;
+    grid-template-rows: repeat(2,55px);
+    grid-template-columns: repeat(3,55px);
+    grid-area: auto;
+}
+
+.show_click{
+    left:80%;
+}
+
+/* *********** */
+/**** Hover ****/
+/* *********** */
+
+.mcdonald:hover{
+    background-color: rgba(100,100,100,1);
+    border-radius: 50%;
+}
+
+.text_list:hover{
+
+    text-decoration: underline;   
+
+}
+
+input:hover{
+    box-shadow: 0px 0px 5px 1px #111;
+}
+
+.buttons a:hover{
+
+    outline : 1px solid rgb(218, 220, 224);
+}
